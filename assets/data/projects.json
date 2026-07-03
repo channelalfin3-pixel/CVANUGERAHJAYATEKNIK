@@ -1,0 +1,82 @@
+[
+  {
+    "id": "proj-01",
+    "nama": "Instalasi HVAC Pabrik Tekstil Cikarang",
+    "lokasi": "Cikarang, Jawa Barat",
+    "tahun": "2024",
+    "status": "Selesai",
+    "kategori": "HVAC",
+    "gambar": "https://images.unsplash.com/photo-1581091877018-dac6a371d50f?auto=format&fit=crop&w=900&q=80",
+    "deskripsi": "Instalasi sistem HVAC menyeluruh meliputi AHU, ducting, dan chiller untuk area produksi seluas 8.500 m²."
+  },
+  {
+    "id": "proj-02",
+    "nama": "Instalasi Panel Listrik Gedung Perkantoran",
+    "lokasi": "Jakarta Selatan",
+    "tahun": "2023",
+    "status": "Selesai",
+    "kategori": "Electrical",
+    "gambar": "https://images.unsplash.com/photo-1621905252507-a1d1e5c8c1a7?auto=format&fit=crop&w=900&q=80",
+    "deskripsi": "Perancangan dan instalasi panel LVMDP, SDP, serta jaringan cable tray pada gedung perkantoran 18 lantai."
+  },
+  {
+    "id": "proj-03",
+    "nama": "Sistem AC Central Rumah Sakit",
+    "lokasi": "Bekasi, Jawa Barat",
+    "tahun": "2023",
+    "status": "Selesai",
+    "kategori": "HVAC",
+    "gambar": "https://images.unsplash.com/photo-1587351021355-a479a299d2f9?auto=format&fit=crop&w=900&q=80",
+    "deskripsi": "Instalasi sistem AC central dengan standar kualitas udara rumah sakit termasuk ruang operasi dan ICU."
+  },
+  {
+    "id": "proj-04",
+    "nama": "Mechanical Electrical Mall & Ritel",
+    "lokasi": "Tangerang, Banten",
+    "tahun": "2022",
+    "status": "Selesai",
+    "kategori": "Mechanical & Electrical",
+    "gambar": "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?auto=format&fit=crop&w=900&q=80",
+    "deskripsi": "Pekerjaan ME terpadu untuk pusat perbelanjaan meliputi fire protection, plumbing, dan kelistrikan area komersial."
+  },
+  {
+    "id": "proj-05",
+    "nama": "Instalasi Chiller & Cooling Tower Hotel",
+    "lokasi": "Bandung, Jawa Barat",
+    "tahun": "2022",
+    "status": "Selesai",
+    "kategori": "HVAC",
+    "gambar": "https://images.unsplash.com/photo-1554774853-b415df9eeb92?auto=format&fit=crop&w=900&q=80",
+    "deskripsi": "Penggantian dan instalasi sistem chiller water cooled beserta cooling tower untuk hotel bintang 4."
+  },
+  {
+    "id": "proj-06",
+    "nama": "Instalasi Genset & Sinkronisasi Gedung Pemerintah",
+    "lokasi": "Jakarta Pusat",
+    "tahun": "2021",
+    "status": "Selesai",
+    "kategori": "Electrical",
+    "gambar": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=900&q=80",
+    "deskripsi": "Instalasi genset 1.000 kVA lengkap dengan sistem sinkronisasi otomatis untuk backup daya gedung pemerintah."
+  },
+  {
+    "id": "proj-07",
+    "nama": "Sistem VRF Apartemen",
+    "lokasi": "Surabaya, Jawa Timur",
+    "tahun": "2024",
+    "status": "Berjalan",
+    "kategori": "HVAC",
+    "gambar": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=900&q=80",
+    "deskripsi": "Instalasi sistem VRF untuk 320 unit apartemen dengan kontrol suhu individual per unit hunian."
+  },
+  {
+    "id": "proj-08",
+    "nama": "Instalasi Fire Protection Sekolah",
+    "lokasi": "Depok, Jawa Barat",
+    "tahun": "2021",
+    "status": "Selesai",
+    "kategori": "Mechanical",
+    "gambar": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=900&q=80",
+    "deskripsi": "Instalasi sistem proteksi kebakaran meliputi sprinkler, hydrant, dan fire alarm pada kompleks sekolah."
+  }
+]

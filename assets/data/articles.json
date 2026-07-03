@@ -1,0 +1,56 @@
+[
+  {
+    "id": "art-01",
+    "kategori": "HVAC",
+    "judul": "5 Tips Merawat AC Central Agar Tetap Optimal",
+    "tanggal": "2026-05-12",
+    "gambar": "https://images.unsplash.com/photo-1631545806618-608d867d8ec1?auto=format&fit=crop&w=800&q=80",
+    "ringkasan": "Perawatan berkala pada sistem AC central sangat penting untuk menjaga efisiensi energi dan memperpanjang usia komponen utama seperti chiller dan AHU.",
+    "isi": "Perawatan rutin pada sistem AC central mencakup pembersihan filter, pengecekan tekanan refrigerant, kalibrasi sensor suhu, inspeksi kondisi ducting, dan pemeriksaan performa motor blower. Dengan jadwal preventive maintenance yang konsisten, gedung dapat menghindari kegagalan sistem mendadak sekaligus menekan konsumsi energi listrik secara signifikan."
+  },
+  {
+    "id": "art-02",
+    "kategori": "Mechanical",
+    "judul": "Pentingnya Preventive Maintenance pada Sistem Mechanical",
+    "tanggal": "2026-04-20",
+    "gambar": "https://images.unsplash.com/photo-1581091877018-dac6a371d50f?auto=format&fit=crop&w=800&q=80",
+    "ringkasan": "Preventive maintenance mampu mengurangi risiko kerusakan besar dan menekan biaya operasional jangka panjang pada sistem mechanical gedung.",
+    "isi": "Sistem mechanical seperti pompa, valve, dan ducting memerlukan inspeksi berkala untuk mendeteksi tanda-tanda keausan sejak dini. Program preventive maintenance yang terjadwal membantu perusahaan menghindari downtime tak terduga, memperpanjang usia pakai peralatan, dan menjaga keselamatan kerja di lingkungan industri."
+  },
+  {
+    "id": "art-03",
+    "kategori": "Electrical",
+    "judul": "Mengenal Jenis Panel Listrik untuk Gedung Komersial",
+    "tanggal": "2026-03-08",
+    "gambar": "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?auto=format&fit=crop&w=800&q=80",
+    "ringkasan": "Pemilihan jenis panel listrik yang tepat menentukan keandalan distribusi daya pada sebuah gedung komersial.",
+    "isi": "Panel LVMDP berfungsi sebagai titik distribusi daya utama, sementara SDP mendistribusikan daya ke area-area spesifik dalam gedung. Perancangan panel yang mengikuti standar PUIL dan IEC, disertai komponen proteksi berkualitas, menjadi kunci keandalan sistem kelistrikan jangka panjang."
+  },
+  {
+    "id": "art-04",
+    "kategori": "Maintenance",
+    "judul": "Checklist Maintenance Chiller Sebelum Musim Panas",
+    "tanggal": "2026-02-15",
+    "gambar": "https://images.unsplash.com/photo-1581093458791-9f3113b6c8b8?auto=format&fit=crop&w=800&q=80",
+    "ringkasan": "Persiapan sistem chiller sebelum beban puncak musim panas dapat mencegah gangguan operasional gedung.",
+    "isi": "Beberapa item penting dalam checklist maintenance chiller meliputi pengecekan level refrigerant, kondisi kompresor, kebersihan kondensor, kalibrasi sistem kontrol, serta pengujian tekanan pada seluruh jalur perpipaan. Persiapan yang matang membantu chiller bekerja optimal saat beban pendinginan meningkat."
+  },
+  {
+    "id": "art-05",
+    "kategori": "Tips AC Central",
+    "judul": "Cara Menghitung Kebutuhan Kapasitas AC Central Gedung",
+    "tanggal": "2026-01-22",
+    "gambar": "https://images.unsplash.com/photo-1631545806609-4b8f68e9d3f4?auto=format&fit=crop&w=800&q=80",
+    "ringkasan": "Perhitungan kapasitas pendinginan yang tepat menjadi dasar utama dalam merancang sistem HVAC yang efisien.",
+    "isi": "Perhitungan beban pendinginan mempertimbangkan faktor luas ruangan, jumlah penghuni, peralatan elektronik, orientasi bangunan terhadap sinar matahari, hingga material dinding dan kaca. Perhitungan yang akurat memastikan sistem AC central bekerja efisien tanpa oversized maupun undersized."
+  },
+  {
+    "id": "art-06",
+    "kategori": "Tips Panel",
+    "judul": "Standar Keselamatan dalam Instalasi Panel Listrik",
+    "tanggal": "2025-12-10",
+    "gambar": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+    "ringkasan": "Keselamatan kerja menjadi prioritas utama dalam setiap tahapan instalasi panel listrik tegangan rendah maupun menengah.",
+    "isi": "Instalasi panel listrik harus mengikuti prosedur K3 yang ketat, mulai dari penggunaan APD standar, prosedur lock-out tag-out, hingga pengujian insulasi sebelum panel dioperasikan. Kepatuhan terhadap standar keselamatan ini melindungi teknisi sekaligus menjaga keandalan sistem kelistrikan gedung."
+  }
+]

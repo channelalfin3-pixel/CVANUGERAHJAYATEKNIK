@@ -1,0 +1,192 @@
+[
+  {
+    "id": "ahu",
+    "kategori": "HVAC",
+    "nama": "Air Handling Unit (AHU)",
+    "gambar": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Kapasitas 3.000 - 50.000 CMH, tipe Horizontal & Vertical, coil chilled water / DX",
+    "deskripsi": "Unit penanganan udara sentral untuk mengatur suhu, kelembapan, dan sirkulasi udara pada gedung berskala besar.",
+    "keunggulan": ["Efisiensi energi tinggi", "Konstruksi casing double skin anti korosi", "Filter multi-stage"],
+    "aplikasi": ["Pabrik", "Mall", "Rumah Sakit", "Perkantoran"]
+  },
+  {
+    "id": "fcu",
+    "kategori": "HVAC",
+    "nama": "Fan Coil Unit (FCU)",
+    "gambar": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Kapasitas 400 - 1.600 CMH, tipe Ceiling Concealed & Cassette",
+    "deskripsi": "Unit pendingin ruangan skala menengah yang bekerja dengan sistem chilled water, ideal untuk distribusi udara per ruangan.",
+    "keunggulan": ["Operasional senyap", "Hemat ruang instalasi", "Kontrol suhu individual"],
+    "aplikasi": ["Hotel", "Apartemen", "Perkantoran"]
+  },
+  {
+    "id": "exhaust-fan",
+    "kategori": "Mechanical",
+    "nama": "Exhaust Fan",
+    "gambar": "https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Kapasitas 500 - 20.000 CMH, tipe Wall Mounted & Inline",
+    "deskripsi": "Sistem ventilasi untuk membuang udara kotor, panas, dan asap dari area tertutup secara efisien.",
+    "keunggulan": ["Motor tahan panas", "Noise level rendah", "Perawatan mudah"],
+    "aplikasi": ["Pabrik", "Dapur Industri", "Parkiran Basement"]
+  },
+  {
+    "id": "axial-fan",
+    "kategori": "Mechanical",
+    "nama": "Axial Fan",
+    "gambar": "https://images.unsplash.com/photo-1581092918484-8313ade4d1d4?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Diameter 300 - 1.400 mm, static pressure rendah - menengah",
+    "deskripsi": "Kipas aksial untuk sirkulasi udara volume besar dengan tekanan statis rendah, umum untuk ventilasi ruang besar.",
+    "keunggulan": ["Debit udara besar", "Instalasi fleksibel", "Efisiensi tinggi"],
+    "aplikasi": ["Gudang", "Pabrik", "Parkiran"]
+  },
+  {
+    "id": "cooling-tower",
+    "kategori": "HVAC",
+    "nama": "Cooling Tower",
+    "gambar": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Kapasitas 20 - 500 RT, tipe Counter Flow & Cross Flow",
+    "deskripsi": "Menara pendingin untuk membuang panas dari sistem chiller melalui proses evaporasi air.",
+    "keunggulan": ["Material FRP anti korosi", "Efisiensi transfer panas optimal", "Noise reduction fill"],
+    "aplikasi": ["Pabrik", "Mall", "Rumah Sakit"]
+  },
+  {
+    "id": "chiller",
+    "kategori": "HVAC",
+    "nama": "Chiller",
+    "gambar": "https://images.unsplash.com/photo-1581093458791-9f3113b6c8b8?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Kapasitas 20 - 1.000 RT, tipe Air Cooled & Water Cooled",
+    "deskripsi": "Mesin pendingin sentral yang memproduksi air dingin untuk didistribusikan ke seluruh sistem HVAC gedung.",
+    "keunggulan": ["Refrigerant ramah lingkungan", "Sistem kontrol otomatis", "Hemat energi"],
+    "aplikasi": ["Gedung Bertingkat", "Pabrik", "Hotel"]
+  },
+  {
+    "id": "ducting",
+    "kategori": "HVAC",
+    "nama": "Ducting (Sistem Saluran Udara)",
+    "gambar": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Material BJLS/Galvanis, tebal 0.6 - 1.2 mm, sesuai standar SMACNA",
+    "deskripsi": "Saluran distribusi udara dari sistem AHU/FCU ke seluruh ruangan dengan desain efisien dan minim kebocoran.",
+    "keunggulan": ["Fabrikasi presisi", "Isolasi thermal optimal", "Sesuai standar internasional"],
+    "aplikasi": ["Semua jenis gedung komersial & industri"]
+  },
+  {
+    "id": "cable-tray",
+    "kategori": "Electrical",
+    "nama": "Cable Tray",
+    "gambar": "https://images.unsplash.com/photo-1621905252472-943afaa20e20?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Material Hot Dip Galvanized / Stainless Steel, tipe Ladder & Perforated",
+    "deskripsi": "Jalur dudukan kabel listrik yang rapi dan aman untuk instalasi kabel power maupun data.",
+    "keunggulan": ["Tahan korosi", "Kapasitas beban tinggi", "Instalasi cepat"],
+    "aplikasi": ["Pabrik", "Gedung", "Data Center"]
+  },
+  {
+    "id": "panel-listrik",
+    "kategori": "Electrical",
+    "nama": "Panel Listrik (LVMDP/SDP)",
+    "gambar": "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Custom sesuai kebutuhan beban, standar IEC/PUIL, komponen Schneider/ABB/Siemens",
+    "deskripsi": "Panel distribusi daya listrik utama yang dirakit sesuai kebutuhan sistem kelistrikan bangunan.",
+    "keunggulan": ["Desain custom engineering", "Komponen bersertifikat", "Quality control ketat"],
+    "aplikasi": ["Pabrik", "Gedung", "Rumah Sakit"]
+  },
+  {
+    "id": "genset",
+    "kategori": "Electrical",
+    "nama": "Genset",
+    "gambar": "https://images.unsplash.com/photo-1620825141212-a2f8f0a86b1f?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Kapasitas 20 - 2.000 kVA, tipe Silent & Open Frame",
+    "deskripsi": "Sumber daya listrik cadangan otomatis untuk menjamin operasional tetap berjalan saat listrik utama padam.",
+    "keunggulan": ["Automatic Transfer Switch", "Konsumsi bahan bakar efisien", "Instalasi & sinkronisasi profesional"],
+    "aplikasi": ["Pabrik", "Rumah Sakit", "Gedung Pemerintah"]
+  },
+  {
+    "id": "pompa",
+    "kategori": "Mechanical",
+    "nama": "Pompa (Pump)",
+    "gambar": "https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Tipe End Suction, Split Case, Submersible - kapasitas custom",
+    "deskripsi": "Sistem pemompaan untuk distribusi air bersih, air limbah, hingga sistem pemadam kebakaran.",
+    "keunggulan": ["Efisiensi hidrolik tinggi", "Material tahan korosi", "Sistem kontrol otomatis"],
+    "aplikasi": ["Gedung", "Pabrik", "Perumahan"]
+  },
+  {
+    "id": "valve",
+    "kategori": "Mechanical",
+    "nama": "Valve Industrial",
+    "gambar": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Tipe Gate, Butterfly, Check, Ball - berbagai ukuran & tekanan",
+    "deskripsi": "Katup pengatur aliran fluida pada sistem perpipaan mechanical dan plumbing.",
+    "keunggulan": ["Material sesuai standar API/ANSI", "Daya tahan tinggi", "Berbagai pilihan aktuator"],
+    "aplikasi": ["Pabrik", "HVAC System", "Fire Protection"]
+  },
+  {
+    "id": "ac-central",
+    "kategori": "HVAC",
+    "nama": "AC Central",
+    "gambar": "https://images.unsplash.com/photo-1631545806618-608d867d8ec1?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Sistem Chilled Water / DX, kapasitas custom sesuai luas bangunan",
+    "deskripsi": "Sistem pendingin terpusat untuk kenyamanan suhu di seluruh area gedung secara merata.",
+    "keunggulan": ["Distribusi suhu merata", "Hemat energi jangka panjang", "Perawatan terjadwal"],
+    "aplikasi": ["Mall", "Hotel", "Perkantoran"]
+  },
+  {
+    "id": "vrv-vrf",
+    "kategori": "HVAC",
+    "nama": "VRV / VRF System",
+    "gambar": "https://images.unsplash.com/photo-1631545806609-4b8f68e9d3f4?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Kapasitas 8 - 60 HP per outdoor unit, refrigerant flow variable",
+    "deskripsi": "Sistem pendingin dengan kontrol suhu individual per ruangan namun tetap efisien secara energi.",
+    "keunggulan": ["Kontrol per zona/ruangan", "Instalasi fleksibel", "Efisiensi energi tinggi"],
+    "aplikasi": ["Perkantoran", "Apartemen", "Hotel"]
+  },
+  {
+    "id": "air-curtain",
+    "kategori": "HVAC",
+    "nama": "Air Curtain",
+    "gambar": "https://images.unsplash.com/photo-1631049035182-249067d7618e?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Panjang 900 - 2.000 mm, kecepatan angin adjustable",
+    "deskripsi": "Tirai udara pada pintu masuk untuk menjaga suhu ruangan dan mencegah masuknya debu/serangga.",
+    "keunggulan": ["Hemat energi pendingin ruangan", "Desain minimalis", "Operasional senyap"],
+    "aplikasi": ["Mall", "Gudang", "Restoran"]
+  },
+  {
+    "id": "fire-damper",
+    "kategori": "Mechanical",
+    "nama": "Fire Damper",
+    "gambar": "https://images.unsplash.com/photo-1581092333026-cb87b3c4a19e?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Fire rated 1-3 jam sesuai standar, tipe Curtain & Multi Blade",
+    "deskripsi": "Komponen keselamatan pada sistem ducting yang menutup otomatis saat terjadi kebakaran untuk mencegah penyebaran api.",
+    "keunggulan": ["Bersertifikat fire rated", "Fusible link presisi", "Sesuai standar keselamatan gedung"],
+    "aplikasi": ["Gedung Bertingkat", "Mall", "Rumah Sakit"]
+  },
+  {
+    "id": "flexible-duct",
+    "kategori": "HVAC",
+    "nama": "Flexible Duct",
+    "gambar": "https://images.unsplash.com/photo-1621905252507-b1e1b7d8c1b7?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Diameter 100 - 500 mm, insulated & non-insulated",
+    "deskripsi": "Saluran udara fleksibel penghubung ducting utama ke diffuser/grille pada titik distribusi akhir.",
+    "keunggulan": ["Instalasi cepat & fleksibel", "Insulasi termal baik", "Tahan lama"],
+    "aplikasi": ["Perkantoran", "Ritel", "Apartemen"]
+  },
+  {
+    "id": "diffuser",
+    "kategori": "HVAC",
+    "nama": "Diffuser",
+    "gambar": "https://images.unsplash.com/photo-1631545806613-5f8f68e9d3f5?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Tipe Square, Round, Linear - material aluminium",
+    "deskripsi": "Titik keluar udara dari sistem HVAC yang didesain untuk distribusi udara merata dan estetika ceiling.",
+    "keunggulan": ["Desain estetik", "Distribusi udara merata", "Mudah dibersihkan"],
+    "aplikasi": ["Semua jenis gedung"]
+  },
+  {
+    "id": "grille",
+    "kategori": "HVAC",
+    "nama": "Grille",
+    "gambar": "https://images.unsplash.com/photo-1631545806616-6f8f68e9d3f6?auto=format&fit=crop&w=800&q=80",
+    "spesifikasi": "Tipe Supply & Return, material aluminium anodized",
+    "deskripsi": "Komponen ventilasi untuk supply maupun return udara pada sistem HVAC dengan berbagai model bukaan.",
+    "keunggulan": ["Airflow optimal", "Finishing premium", "Berbagai pilihan ukuran"],
+    "aplikasi": ["Perkantoran", "Hotel", "Rumah Sakit"]
+  }
+]

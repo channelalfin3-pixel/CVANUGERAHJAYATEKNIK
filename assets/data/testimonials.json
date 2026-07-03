@@ -1,0 +1,37 @@
+[
+  {
+    "nama": "Budi Santoso",
+    "perusahaan": "PT Sinar Tekstil Nusantara",
+    "foto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80",
+    "rating": 5,
+    "komentar": "CV Anugerah Jaya Teknik menangani instalasi HVAC pabrik kami dengan sangat profesional. Tepat waktu dan hasil pekerjaan rapi."
+  },
+  {
+    "nama": "Dewi Anggraini",
+    "perusahaan": "RS Permata Bunda",
+    "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
+    "rating": 5,
+    "komentar": "Tim teknisinya berpengalaman dan memahami standar rumah sakit. Sistem AC central hasil instalasi mereka bekerja sangat stabil."
+  },
+  {
+    "nama": "Hendra Wijaya",
+    "perusahaan": "Graha Kencana Office Tower",
+    "foto": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80",
+    "rating": 5,
+    "komentar": "Pengerjaan panel listrik gedung kami selesai sesuai jadwal dengan kualitas komponen yang terjamin. Sangat direkomendasikan."
+  },
+  {
+    "nama": "Siti Rahmawati",
+    "perusahaan": "Mall Central Plaza",
+    "foto": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80",
+    "rating": 4,
+    "komentar": "Layanan maintenance berkala mereka membantu kami menekan biaya operasional AC central secara signifikan."
+  },
+  {
+    "nama": "Agus Prasetyo",
+    "perusahaan": "Hotel Grand Sejahtera",
+    "foto": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=200&q=80",
+    "rating": 5,
+    "komentar": "Komunikasi yang baik selama proyek berlangsung, harga kompetitif, dan hasil kerja sesuai ekspektasi kami."
+  }
+]

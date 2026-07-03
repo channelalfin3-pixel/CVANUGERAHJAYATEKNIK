@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri | CV Anugerah Jaya Teknik</title>
+<meta name="description" content="Galeri foto proyek, instalasi, dan workshop CV Anugerah Jaya Teknik, kontraktor Mechanical, Electrical, dan HVAC.">
+<link rel="canonical" href="https://anugerahjayateknik.co.id/galeri.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23071A30%22/><text x=%2250%22 y=%2265%22 font-size=%2244%22 fill=%22%23F4770B%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22bold%22>AJT</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .gallery-item{position:relative;overflow:hidden;border-radius:14px;aspect-ratio:1/1;cursor:pointer;}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .gallery-item:hover img{transform:scale(1.1);}
+  .gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,26,48,.75),transparent 60%);display:flex;align-items:flex-end;padding:14px;opacity:0;transition:opacity .3s ease;}
+  .gallery-item:hover .overlay{opacity:1;}
+  .overlay span{color:#fff;font-size:.82rem;font-weight:600;}
+</style>
+</head>
+<body>
+<div id="loader"><div class="loader-mark">AJT</div></div>
+<div id="site-header"></div>
+
+<header class="page-header">
+  <div class="container-ajt">
+    <nav class="breadcrumb-ajt"><a href="index.html">Home</a> / Galeri</nav>
+    <h1>Galeri Foto Proyek &amp; Instalasi</h1>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container-ajt">
+    <div class="filter-bar" id="galeriFilterBar">
+      <button class="filter-btn active" data-cat="Semua">Semua</button>
+      <button class="filter-btn" data-cat="Proyek">Foto Proyek</button>
+      <button class="filter-btn" data-cat="Instalasi">Foto Instalasi</button>
+      <button class="filter-btn" data-cat="Pekerjaan">Foto Pekerjaan</button>
+      <button class="filter-btn" data-cat="Workshop">Foto Workshop</button>
+    </div>
+    <div class="row g-3" id="galeriGrid"></div>
+  </div>
+</section>
+
+<div class="modal fade" id="galeriModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <button class="btn-close btn-close-white ms-auto mb-2" data-bs-dismiss="modal"></button>
+      <img id="galeriModalImg" class="rounded-4 w-100" alt="Pratinjau galeri">
+    </div>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<div id="site-floating"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const galeriData = [
+    { cat:'Proyek', img:'https://images.unsplash.com/photo-1581091877018-dac6a371d50f?auto=format&fit=crop&w=700&q=80', label:'Instalasi HVAC Pabrik' },
+    { cat:'Instalasi', img:'https://images.unsplash.com/photo-1621905252507-a1d1e5c8c1a7?auto=format&fit=crop&w=700&q=80', label:'Panel Listrik Gedung' },
+    { cat:'Pekerjaan', img:'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=700&q=80', label:'Teknisi di Lapangan' },
+    { cat:'Workshop', img:'https://images.unsplash.com/photo-1581093458791-9f3113b6c8b8?auto=format&fit=crop&w=700&q=80', label:'Workshop Fabrikasi' },
+    { cat:'Proyek', img:'https://images.unsplash.com/photo-1587351021355-a479a299d2f9?auto=format&fit=crop&w=700&q=80', label:'AC Central Rumah Sakit' },
+    { cat:'Instalasi', img:'https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?auto=format&fit=crop&w=700&q=80', label:'ME Mall & Ritel' },
+    { cat:'Pekerjaan', img:'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&q=80', label:'Instalasi Ducting' },
+    { cat:'Workshop', img:'https://images.unsplash.com/photo-1581092333026-cb87b3c4a19e?auto=format&fit=crop&w=700&q=80', label:'Fabrikasi Fire Damper' },
+    { cat:'Proyek', img:'https://images.unsplash.com/photo-1554774853-b415df9eeb92?auto=format&fit=crop&w=700&q=80', label:'Chiller & Cooling Tower Hotel' },
+    { cat:'Instalasi', img:'https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?auto=format&fit=crop&w=700&q=80', label:'Panel LVMDP' },
+    { cat:'Pekerjaan', img:'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80', label:'Pengujian Sistem' },
+    { cat:'Workshop', img:'https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?auto=format&fit=crop&w=700&q=80', label:'Perakitan Panel' }
+  ];
+  const grid = document.getElementById('galeriGrid');
+  function paintGaleri(list){
+    grid.innerHTML = list.map(g => `
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="gallery-item" data-aos="zoom-in" data-bs-toggle="modal" data-bs-target="#galeriModal" data-img="${g.img}">
+          <img src="${g.img}" alt="${g.label}" loading="lazy">
+          <div class="overlay"><span>${g.label}</span></div>
+        </div>
+      </div>`).join('');
+    document.querySelectorAll('.gallery-item').forEach(el=>{
+      el.addEventListener('click',()=>{document.getElementById('galeriModalImg').src = el.getAttribute('data-img');});
+    });
+  }
+  paintGaleri(galeriData);
+  document.querySelectorAll('#galeriFilterBar .filter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('#galeriFilterBar .filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.getAttribute('data-cat');
+      paintGaleri(cat==='Semua' ? galeriData : galeriData.filter(g=>g.cat===cat));
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel | CV Anugerah Jaya Teknik</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23071A30%22/><text x=%2250%22 y=%2265%22 font-size=%2244%22 fill=%22%23F4770B%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22bold%22>AJT</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  body{background:var(--off-white);}
+  .admin-shell{max-width:1100px;margin:0 auto;padding:40px 20px 80px;}
+  .admin-topbar{background:var(--navy-900);color:#fff;padding:20px 0;margin-bottom:32px;}
+  .admin-topbar .container-ajt{display:flex;align-items:center;justify-content:space-between;}
+  .table-ajt th{font-family:var(--font-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);}
+  .thumb-sm{width:52px;height:40px;object-fit:cover;border-radius:6px;}
+</style>
+</head>
+<body>
+
+<div class="admin-topbar">
+  <div class="container-ajt">
+    <a href="index.html" class="brand" style="color:#fff;"><span class="brand-mark">AJT</span> Admin Panel (Tanpa Database)</a>
+    <a href="index.html" class="btn-ajt btn-ajt-outline btn-sm"><i class="fa-solid fa-arrow-left"></i> Kembali ke Website</a>
+  </div>
+</div>
+
+<div class="admin-shell">
+  <div class="alert" style="background:var(--orange-100);border:1px solid var(--orange-500);border-radius:12px;color:var(--navy-900);">
+    <strong>Cara kerja panel ini:</strong> Website ini tidak menggunakan server/database — seluruh konten Produk, Project, dan Artikel bersumber dari file JSON di <code>assets/data/</code>. Gunakan form di bawah untuk menambah/mengedit data, lalu klik <strong>"Unduh JSON"</strong> dan timpa (replace) file terkait di folder <code>assets/data/</code>, kemudian commit &amp; push ke GitHub agar perubahan tampil di website.
+  </div>
+
+  <ul class="nav nav-pills mb-4" id="adminTabs">
+    <li class="nav-item"><button class="nav-link active" data-target="tab-produk">Produk</button></li>
+    <li class="nav-item"><button class="nav-link" data-target="tab-project">Project</button></li>
+    <li class="nav-item"><button class="nav-link" data-target="tab-artikel">Artikel</button></li>
+  </ul>
+
+  <!-- PRODUK TAB -->
+  <div class="admin-tab" id="tab-produk">
+    <div class="card-ajt p-4 mb-4">
+      <h5 class="fw-semibold mb-3">Tambah / Edit Produk</h5>
+      <form class="form-ajt row g-3" id="formProduk">
+        <input type="hidden" id="p-id">
+        <div class="col-md-6"><label>Nama Produk</label><input class="form-control" id="p-nama" required></div>
+        <div class="col-md-6"><label>Kategori</label><input class="form-control" id="p-kategori" placeholder="Mechanical / Electrical / HVAC" required></div>
+        <div class="col-md-6"><label>URL Gambar</label><input class="form-control" id="p-gambar" placeholder="https://..." required></div>
+        <div class="col-md-6"><label>Upload Gambar (opsional, jadi data-URI)</label><input class="form-control" type="file" id="p-gambar-file" accept="image/*"></div>
+        <div class="col-12"><label>Spesifikasi</label><input class="form-control" id="p-spesifikasi" required></div>
+        <div class="col-12"><label>Deskripsi</label><textarea class="form-control" id="p-deskripsi" rows="2" required></textarea></div>
+        <div class="col-md-6"><label>Keunggulan (pisahkan dengan koma)</label><input class="form-control" id="p-keunggulan"></div>
+        <div class="col-md-6"><label>Aplikasi (pisahkan dengan koma)</label><input class="form-control" id="p-aplikasi"></div>
+        <div class="col-12 d-flex gap-2">
+          <button class="btn-ajt btn-ajt-primary" type="submit"><i class="fa-solid fa-plus"></i> Simpan Produk</button>
+          <button class="btn-ajt btn-ajt-outline" style="color:var(--navy-800);border-color:var(--navy-800);" type="button" id="resetProduk">Reset Form</button>
+        </div>
+      </form>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h6 class="fw-semibold mb-0">Daftar Produk (<span id="countProduk">0</span>)</h6>
+      <button class="btn-ajt btn-ajt-navy btn-sm" id="downloadProduk"><i class="fa-solid fa-download"></i> Unduh products.json</button>
+    </div>
+    <div class="table-responsive"><table class="table table-ajt align-middle bg-white rounded-3 overflow-hidden">
+      <thead><tr><th>Foto</th><th>Nama</th><th>Kategori</th><th></th></tr></thead>
+      <tbody id="tableProduk"></tbody>
+    </table></div>
+  </div>
+
+  <!-- PROJECT TAB -->
+  <div class="admin-tab d-none" id="tab-project">
+    <div class="card-ajt p-4 mb-4">
+      <h5 class="fw-semibold mb-3">Tambah / Edit Project</h5>
+      <form class="form-ajt row g-3" id="formProject">
+        <input type="hidden" id="pr-id">
+        <div class="col-md-6"><label>Nama Project</label><input class="form-control" id="pr-nama" required></div>
+        <div class="col-md-6"><label>Kategori</label><input class="form-control" id="pr-kategori" required></div>
+        <div class="col-md-4"><label>Lokasi</label><input class="form-control" id="pr-lokasi" required></div>
+        <div class="col-md-4"><label>Tahun</label><input class="form-control" id="pr-tahun" required></div>
+        <div class="col-md-4"><label>Status</label>
+          <select class="form-select" id="pr-status"><option>Selesai</option><option>Berjalan</option></select>
+        </div>
+        <div class="col-md-6"><label>URL Gambar</label><input class="form-control" id="pr-gambar" required></div>
+        <div class="col-12"><label>Deskripsi</label><textarea class="form-control" id="pr-deskripsi" rows="2" required></textarea></div>
+        <div class="col-12 d-flex gap-2">
+          <button class="btn-ajt btn-ajt-primary" type="submit"><i class="fa-solid fa-plus"></i> Simpan Project</button>
+          <button class="btn-ajt btn-ajt-outline" style="color:var(--navy-800);border-color:var(--navy-800);" type="button" id="resetProject">Reset Form</button>
+        </div>
+      </form>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h6 class="fw-semibold mb-0">Daftar Project (<span id="countProject">0</span>)</h6>
+      <button class="btn-ajt btn-ajt-navy btn-sm" id="downloadProject"><i class="fa-solid fa-download"></i> Unduh projects.json</button>
+    </div>
+    <div class="table-responsive"><table class="table table-ajt align-middle bg-white rounded-3 overflow-hidden">
+      <thead><tr><th>Foto</th><th>Nama</th><th>Lokasi</th><th></th></tr></thead>
+      <tbody id="tableProject"></tbody>
+    </table></div>
+  </div>
+
+  <!-- ARTIKEL TAB -->
+  <div class="admin-tab d-none" id="tab-artikel">
+    <div class="card-ajt p-4 mb-4">
+      <h5 class="fw-semibold mb-3">Tambah / Edit Artikel</h5>
+      <form class="form-ajt row g-3" id="formArtikel">
+        <input type="hidden" id="a-id">
+        <div class="col-md-6"><label>Judul</label><input class="form-control" id="a-judul" required></div>
+        <div class="col-md-3"><label>Kategori</label><input class="form-control" id="a-kategori" required></div>
+        <div class="col-md-3"><label>Tanggal</label><input type="date" class="form-control" id="a-tanggal" required></div>
+        <div class="col-md-6"><label>URL Gambar</label><input class="form-control" id="a-gambar" required></div>
+        <div class="col-12"><label>Ringkasan</label><textarea class="form-control" id="a-ringkasan" rows="2" required></textarea></div>
+        <div class="col-12"><label>Isi Artikel</label><textarea class="form-control" id="a-isi" rows="4" required></textarea></div>
+        <div class="col-12 d-flex gap-2">
+          <button class="btn-ajt btn-ajt-primary" type="submit"><i class="fa-solid fa-plus"></i> Simpan Artikel</button>
+          <button class="btn-ajt btn-ajt-outline" style="color:var(--navy-800);border-color:var(--navy-800);" type="button" id="resetArtikel">Reset Form</button>
+        </div>
+      </form>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h6 class="fw-semibold mb-0">Daftar Artikel (<span id="countArtikel">0</span>)</h6>
+      <button class="btn-ajt btn-ajt-navy btn-sm" id="downloadArtikel"><i class="fa-solid fa-download"></i> Unduh articles.json</button>
+    </div>
+    <div class="table-responsive"><table class="table table-ajt align-middle bg-white rounded-3 overflow-hidden">
+      <thead><tr><th>Foto</th><th>Judul</th><th>Kategori</th><th></th></tr></thead>
+      <tbody id="tableArtikel"></tbody>
+    </table></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('#adminTabs .nav-link').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('#adminTabs .nav-link').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.admin-tab').forEach(t=>t.classList.add('d-none'));
+    document.getElementById(btn.getAttribute('data-target')).classList.remove('d-none');
+  });
+});
+
+function slugify(str){return str.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');}
+function downloadJSON(data, filename){
+  const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = filename; a.click();
+}
+
+/* ---------- PRODUK CRUD (state in-memory, seeded from assets/data/products.json) ---------- */
+let produkData = [];
+fetch('assets/data/products.json').then(r=>r.json()).then(d=>{produkData=d; paintProduk();}).catch(()=>paintProduk());
+
+function paintProduk(){
+  document.getElementById('countProduk').textContent = produkData.length;
+  document.getElementById('tableProduk').innerHTML = produkData.map(p=>`
+    <tr>
+      <td><img src="${p.gambar}" class="thumb-sm" alt=""></td>
+      <td>${p.nama}</td>
+      <td>${p.kategori}</td>
+      <td class="text-end">
+        <button class="btn btn-sm btn-outline-secondary me-1" onclick="editProduk('${p.id}')"><i class="fa-solid fa-pen"></i></button>
+        <button class="btn btn-sm btn-outline-danger" onclick="deleteProduk('${p.id}')"><i class="fa-solid fa-trash"></i></button>
+      </td>
+    </tr>`).join('') || '<tr><td colspan="4" class="text-center text-secondary py-3">Belum ada data</td></tr>';
+}
+window.editProduk = (id)=>{
+  const p = produkData.find(x=>x.id===id); if(!p) return;
+  document.getElementById('p-id').value=p.id;
+  document.getElementById('p-nama').value=p.nama;
+  document.getElementById('p-kategori').value=p.kategori;
+  document.getElementById('p-gambar').value=p.gambar;
+  document.getElementById('p-spesifikasi').value=p.spesifikasi;
+  document.getElementById('p-deskripsi').value=p.deskripsi;
+  document.getElementById('p-keunggulan').value=p.keunggulan.join(', ');
+  document.getElementById('p-aplikasi').value=p.aplikasi.join(', ');
+  window.scrollTo({top:0,behavior:'smooth'});
+};
+window.deleteProduk = (id)=>{ produkData = produkData.filter(x=>x.id!==id); paintProduk(); };
+
+document.getElementById('p-gambar-file').addEventListener('change', (e)=>{
+  const file = e.target.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ()=>{ document.getElementById('p-gambar').value = reader.result; };
+  reader.readAsDataURL(file);
+});
+
+document.getElementById('formProduk').addEventListener('submit', (e)=>{
+  e.preventDefault();
+  const id = document.getElementById('p-id').value || slugify(document.getElementById('p-nama').value)+'-'+Date.now().toString().slice(-4);
+  const entry = {
+    id,
+    kategori: document.getElementById('p-kategori').value,
+    nama: document.getElementById('p-nama').value,
+    gambar: document.getElementById('p-gambar').value,
+    spesifikasi: document.getElementById('p-spesifikasi').value,
+    deskripsi: document.getElementById('p-deskripsi').value,
+    keunggulan: document.getElementById('p-keunggulan').value.split(',').map(s=>s.trim()).filter(Boolean),
+    aplikasi: document.getElementById('p-aplikasi').value.split(',').map(s=>s.trim()).filter(Boolean)
+  };
+  const idx = produkData.findIndex(x=>x.id===id);
+  if(idx>-1) produkData[idx]=entry; else produkData.push(entry);
+  paintProduk();
+  e.target.reset();
+  document.getElementById('p-id').value='';
+});
+document.getElementById('resetProduk').addEventListener('click', ()=>{document.getElementById('formProduk').reset();document.getElementById('p-id').value='';});
+document.getElementById('downloadProduk').addEventListener('click', ()=>downloadJSON(produkData,'products.json'));
+
+/* ---------- PROJECT CRUD ---------- */
+let projectData = [];
+fetch('assets/data/projects.json').then(r=>r.json()).then(d=>{projectData=d; paintProject();}).catch(()=>paintProject());
+function paintProject(){
+  document.getElementById('countProject').textContent = projectData.length;
+  document.getElementById('tableProject').innerHTML = projectData.map(p=>`
+    <tr>
+      <td><img src="${p.gambar}" class="thumb-sm" alt=""></td>
+      <td>${p.nama}</td>
+      <td>${p.lokasi}</td>
+      <td class="text-end">
+        <button class="btn btn-sm btn-outline-secondary me-1" onclick="editProject('${p.id}')"><i class="fa-solid fa-pen"></i></button>
+        <button class="btn btn-sm btn-outline-danger" onclick="deleteProject('${p.id}')"><i class="fa-solid fa-trash"></i></button>
+      </td>
+    </tr>`).join('') || '<tr><td colspan="4" class="text-center text-secondary py-3">Belum ada data</td></tr>';
+}
+window.editProject = (id)=>{
+  const p = projectData.find(x=>x.id===id); if(!p) return;
+  document.getElementById('pr-id').value=p.id;
+  document.getElementById('pr-nama').value=p.nama;
+  document.getElementById('pr-kategori').value=p.kategori;
+  document.getElementById('pr-lokasi').value=p.lokasi;
+  document.getElementById('pr-tahun').value=p.tahun;
+  document.getElementById('pr-status').value=p.status;
+  document.getElementById('pr-gambar').value=p.gambar;
+  document.getElementById('pr-deskripsi').value=p.deskripsi;
+  window.scrollTo({top:0,behavior:'smooth'});
+};
+window.deleteProject = (id)=>{ projectData = projectData.filter(x=>x.id!==id); paintProject(); };
+document.getElementById('formProject').addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const id = document.getElementById('pr-id').value || 'proj-'+Date.now().toString().slice(-5);
+  const entry = {
+    id,
+    nama: document.getElementById('pr-nama').value,
+    lokasi: document.getElementById('pr-lokasi').value,
+    tahun: document.getElementById('pr-tahun').value,
+    status: document.getElementById('pr-status').value,
+    kategori: document.getElementById('pr-kategori').value,
+    gambar: document.getElementById('pr-gambar').value,
+    deskripsi: document.getElementById('pr-deskripsi').value
+  };
+  const idx = projectData.findIndex(x=>x.id===id);
+  if(idx>-1) projectData[idx]=entry; else projectData.push(entry);
+  paintProject(); e.target.reset(); document.getElementById('pr-id').value='';
+});
+document.getElementById('resetProject').addEventListener('click', ()=>{document.getElementById('formProject').reset();document.getElementById('pr-id').value='';});
+document.getElementById('downloadProject').addEventListener('click', ()=>downloadJSON(projectData,'projects.json'));
+
+/* ---------- ARTIKEL CRUD ---------- */
+let artikelData = [];
+fetch('assets/data/articles.json').then(r=>r.json()).then(d=>{artikelData=d; paintArtikel();}).catch(()=>paintArtikel());
+function paintArtikel(){
+  document.getElementById('countArtikel').textContent = artikelData.length;
+  document.getElementById('tableArtikel').innerHTML = artikelData.map(a=>`
+    <tr>
+      <td><img src="${a.gambar}" class="thumb-sm" alt=""></td>
+      <td>${a.judul}</td>
+      <td>${a.kategori}</td>
+      <td class="text-end">
+        <button class="btn btn-sm btn-outline-secondary me-1" onclick="editArtikel('${a.id}')"><i class="fa-solid fa-pen"></i></button>
+        <button class="btn btn-sm btn-outline-danger" onclick="deleteArtikel('${a.id}')"><i class="fa-solid fa-trash"></i></button>
+      </td>
+    </tr>`).join('') || '<tr><td colspan="4" class="text-center text-secondary py-3">Belum ada data</td></tr>';
+}
+window.editArtikel = (id)=>{
+  const a = artikelData.find(x=>x.id===id); if(!a) return;
+  document.getElementById('a-id').value=a.id;
+  document.getElementById('a-judul').value=a.judul;
+  document.getElementById('a-kategori').value=a.kategori;
+  document.getElementById('a-tanggal').value=a.tanggal;
+  document.getElementById('a-gambar').value=a.gambar;
+  document.getElementById('a-ringkasan').value=a.ringkasan;
+  document.getElementById('a-isi').value=a.isi;
+  window.scrollTo({top:0,behavior:'smooth'});
+};
+window.deleteArtikel = (id)=>{ artikelData = artikelData.filter(x=>x.id!==id); paintArtikel(); };
+document.getElementById('formArtikel').addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const id = document.getElementById('a-id').value || 'art-'+Date.now().toString().slice(-5);
+  const entry = {
+    id,
+    kategori: document.getElementById('a-kategori').value,
+    judul: document.getElementById('a-judul').value,
+    tanggal: document.getElementById('a-tanggal').value,
+    gambar: document.getElementById('a-gambar').value,
+    ringkasan: document.getElementById('a-ringkasan').value,
+    isi: document.getElementById('a-isi').value
+  };
+  const idx = artikelData.findIndex(x=>x.id===id);
+  if(idx>-1) artikelData[idx]=entry; else artikelData.push(entry);
+  paintArtikel(); e.target.reset(); document.getElementById('a-id').value='';
+});
+document.getElementById('resetArtikel').addEventListener('click', ()=>{document.getElementById('formArtikel').reset();document.getElementById('a-id').value='';});
+document.getElementById('downloadArtikel').addEventListener('click', ()=>downloadJSON(artikelData,'articles.json'));
+</script>
+</body>
+</html>

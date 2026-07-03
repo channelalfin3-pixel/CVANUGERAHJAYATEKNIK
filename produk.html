@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produk | CV Anugerah Jaya Teknik</title>
+<meta name="description" content="Katalog produk Mechanical, Electrical, dan HVAC dari CV Anugerah Jaya Teknik: AHU, FCU, Chiller, Cooling Tower, Panel Listrik, Genset, VRV/VRF, dan lainnya.">
+<link rel="canonical" href="https://anugerahjayateknik.co.id/produk.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23071A30%22/><text x=%2250%22 y=%2265%22 font-size=%2244%22 fill=%22%23F4770B%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22bold%22>AJT</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="loader"><div class="loader-mark">AJT</div></div>
+<div id="site-header"></div>
+
+<header class="page-header">
+  <div class="container-ajt">
+    <nav class="breadcrumb-ajt"><a href="index.html">Home</a> / Produk</nav>
+    <h1>Katalog Produk Mechanical, Electrical &amp; HVAC</h1>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container-ajt">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+      <div class="filter-bar mb-0" id="produkFilterBar"></div>
+      <form class="d-flex" id="siteSearchForm" role="search">
+        <input type="search" id="siteSearchInput" class="form-control form-ajt" placeholder="Cari produk...">
+        <button class="btn-ajt btn-ajt-navy ms-2" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
+    <div class="row g-4" id="produkGrid"></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<div id="site-floating"></div>
+
+<div class="modal fade" id="produkModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" style="border-radius:18px;overflow:hidden;">
+      <div class="modal-header"><h5 class="modal-title"></h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img class="modal-img rounded-3 mb-3" style="width:100%;aspect-ratio:16/9;object-fit:cover;">
+        <p class="text-mono small text-orange modal-spec"></p>
+        <p class="modal-desc text-secondary"></p>
+        <h6 class="fw-semibold mt-3">Keunggulan</h6>
+        <ul class="modal-keunggulan"></ul>
+        <h6 class="fw-semibold mt-3">Aplikasi</h6>
+        <div class="modal-aplikasi"></div>
+      </div>
+      <div class="modal-footer"><a href="#" class="btn-ajt btn-ajt-primary modal-cta w-100 justify-content-center">Minta Penawaran</a></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/data-loader.js"></script>
+<script src="assets/js/main.js"></script>
+<script>AJT.renderProducts('produkGrid', { enableFilter: true });</script>
+</body>
+</html>
