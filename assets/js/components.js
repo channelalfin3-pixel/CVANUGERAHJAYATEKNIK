@@ -105,9 +105,9 @@ function ajtRenderFooter() {
         <div class="col-lg-4">
           <h5>Kontak</h5>
           <div class="d-flex flex-column gap-2">
-            <span><i class="fa-solid fa-location-dot text-orange me-2"></i>Jl. Industri Raya No. 88, Cikarang, Bekasi, Jawa Barat 17530</span>
-            <a href="tel:+6281234567890"><i class="fa-solid fa-phone text-orange me-2"></i>+62 812-3456-7890</a>
-            <a href="mailto:info@anugerahjayateknik.co.id"><i class="fa-solid fa-envelope text-orange me-2"></i>info@anugerahjayateknik.co.id</a>
+           <span><i class="fa-solid fa-location-dot text-orange me-2"></i>Jl. KH. R. Moh. Rosyid No. KM. 5, Ngumpak Dalem, Kec. Dander, Bojonegoro, Jawa Timur 62171</span>
+<a href="tel:+6281293208137"><i class="fa-solid fa-phone text-orange me-2"></i>+62 812-9320-8137</a>
+<a href="mailto:anugerahjayateknik@gmail.com"><i class="fa-solid fa-envelope text-orange me-2"></i>anugerahjayateknik@gmail.com</a>
             <span><i class="fa-solid fa-clock text-orange me-2"></i>Senin - Sabtu, 08.00 - 17.00 WIB</span>
           </div>
         </div>
@@ -126,8 +126,8 @@ function ajtRenderFloatingActions() {
   el.innerHTML = `
   <div class="floating-actions">
     <button class="fab fab-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
-    <a class="fab fab-call" href="tel:+6281234567890" aria-label="Telepon kami"><i class="fa-solid fa-phone"></i></a>
-    <a class="fab fab-wa" href="https://wa.me/6281234567890?text=Halo%20CV%20Anugerah%20Jaya%20Teknik,%20saya%20ingin%20bertanya" target="_blank" rel="noopener" aria-label="Chat WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a class="fab fab-call" href="tel:+6281293208137" aria-label="Telepon kami"><i class="fa-solid fa-phone"></i></a>
+<a class="fab fab-wa" href="https://wa.me/6281293208137?text=Halo%20CV%20Anugerah%20Jaya%20Teknik,%20saya%20ingin%20bertanya" target="_blank" rel="noopener" aria-label="Chat WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
   </div>`;
 }
 
