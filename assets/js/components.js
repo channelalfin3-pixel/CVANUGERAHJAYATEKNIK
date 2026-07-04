@@ -26,7 +26,7 @@ function ajtRenderHeader() {
   <nav class="navbar-ajt">
     <div class="container-ajt nav-inner">
       <a href="index.html" class="brand">
-        <img src="assets/img/logo-badge.png" alt="Logo CV Anugerah Jaya Teknik" style="width:48px;height:48px;object-fit:contain;">
+        <img src="assets/logo-badge.png" alt="Logo CV Anugerah Jaya Teknik" style="width:48px;height:48px;object-fit:contain;">
         <span>
           CV Anugerah Jaya Teknik
           <small>MECHANICAL · ELECTRICAL · HVAC</small>
