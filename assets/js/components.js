@@ -51,7 +51,7 @@ function ajtRenderHeader() {
 
   <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
     <div class="offcanvas-header">
-      <span class="brand" style="color:var(--navy-900);"><span class="brand-mark">AJT</span> Menu</span>
+      <span class="brand" style="color:var(--navy-900);"><img src="assets/logo-badge.png" alt="Logo CV Anugerah Jaya Teknik" style="width:48px;height:48px;object-fit:contain;"> Menu</span>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body">
@@ -72,7 +72,7 @@ function ajtRenderFooter() {
       <div class="row g-5">
         <div class="col-lg-4">
           <a href="index.html" class="brand mb-3 d-inline-flex" style="color:#fff;">
-            <span class="brand-mark">AJT</span>
+            <img src="assets/logo-badge.png" alt="Logo CV Anugerah Jaya Teknik" style="width:48px;height:48px;object-fit:contain;">
             <span>CV Anugerah Jaya Teknik<small>MECHANICAL · ELECTRICAL · HVAC</small></span>
           </a>
           <p class="mt-3">Kontraktor Mechanical, Electrical &amp; HVAC dengan pengalaman lebih dari 15 tahun, dipercaya oleh pabrik, rumah sakit, hotel, mall, dan gedung pemerintah di seluruh Indonesia.</p>
